@@ -1,5 +1,6 @@
 ---
-title : Index
+title: Index
+layout: default
 ---
 * [Are questions about particular software applications relevant here?](./questions/1.html)
 * [Is digitisation on topic?](./questions/3.html)

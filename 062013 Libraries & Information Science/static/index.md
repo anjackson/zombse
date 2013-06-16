@@ -1,5 +1,6 @@
 ---
-title : Index
+title: Index
+layout: default
 ---
 * [Is it possible to check out someone's PhD student thesis from another university through interlibrary loan?](./questions/1.html)
 * [How do I find old magazines in obscure areas like LEGO Mania magazine?](./questions/2.html)

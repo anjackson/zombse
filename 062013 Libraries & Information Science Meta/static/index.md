@@ -1,5 +1,6 @@
 ---
-title : Index
+title: Index
+layout: default
 ---
 * [Are questions about finding specific types of libraries on topic?](./questions/1.html)
 * [How do we want to handle subjective questions?](./questions/2.html)
