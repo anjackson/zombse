@@ -40,12 +40,18 @@ def print_comments(md,Id):
 
 
 inpage = open("static/index.md","w")
+print >>inpage, "---"
+print >>inpage, "title: Index"
+print >>inpage, "---"
 
 
 for r in posts.row:
   Id = r.get("Id")
   md = open("static/questions/"+Id+".md","w")
   if r.get("ParentId") == None:
+    print >>md, "---"
+    print >>md, "title:"+str(r.get("Title"))
+    print >>md, "---"
     print >>md, str(r.get("Title"))
     print >>md, "====================="
     print >>md, to_markdown(r.get("Body"))

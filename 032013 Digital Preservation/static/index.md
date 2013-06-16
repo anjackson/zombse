@@ -1,3 +1,6 @@
+---
+title: Index
+---
 * [Converting our printed genealogies into digital form](./questions1.html)
 * [How do I get JHOVE2 to build?](./questions3.html)
 * [What physical media format(s) are going to be easiest to open in the future?](./questions4.html)
