@@ -66,7 +66,7 @@ for r in posts.row:
       print >>md, "----------------"
       print >>md, to_markdown(child.get("Body"))
       print_comments(md,child.get("Id"))
-    print >>inpage, "* ["+str(r.get("Title"))+"](./questions"+Id+".html)"
+    print >>inpage, "* ["+str(r.get("Title"))+"](./questions/"+Id+".html)"
 
 
 
