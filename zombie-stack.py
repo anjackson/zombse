@@ -25,7 +25,7 @@ for u in users.iterchildren():
 
 
 def get_user(uid):
-  xpath = "row[@Id='" + uid + "']"
+  xpath = "row[@Id='" + str(uid) + "']"
   return users.find(xpath)
 
 def get_comments(postId):
@@ -35,7 +35,10 @@ def print_comments(md,Id):
     print >>md, "### Comments ###"
     for comment in get_comments(Id):
         cu = get_user(comment.get("UserId"))
-        print >>md, "* "+ cu.get("DisplayName") + ": "+to_markdown(comment.get("Text")).strip()
+        if cu == None:
+          print >>md, "* NONE: "+to_markdown(comment.get("Text")).strip()
+        else:
+          print >>md, "* "+ cu.get("DisplayName") + ": "+to_markdown(comment.get("Text")).strip()
     print >>md, ""
 
 
@@ -62,7 +65,10 @@ for r in posts.row:
     print >>md, ""
     for child in posts.findall("row[@ParentId='" + Id + "']"):
       cu = get_user(child.get("OwnerUserId"))
-      print >>md, "Answer by " + cu.get("DisplayName")
+      if cu == None:
+        print >>md, "Answer by NONE"
+      else:
+        print >>md, "Answer by " + cu.get("DisplayName")
       print >>md, "----------------"
       print >>md, to_markdown(child.get("Body"))
       print_comments(md,child.get("Id"))
