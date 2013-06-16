@@ -45,7 +45,8 @@ def print_comments(md,Id):
 
 inpage = open("static/index.md","w")
 print >>inpage, "---"
-print >>inpage, "title : Index"
+print >>inpage, "title: Index"
+print >>inpage, "layout: default"
 print >>inpage, "---"
 
 
@@ -54,7 +55,8 @@ for r in posts.row:
   md = open("static/questions/"+Id+".md","w")
   if r.get("ParentId") == None:
     print >>md, "---"
-    print >>md, "title : "+str(r.get("Title"))
+    print >>md, "title: \""+str(r.get("Title"))+"\""
+    print >>md, "layout: default"
     print >>md, "---"
     print >>md, str(r.get("Title"))
     print >>md, "====================="
