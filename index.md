@@ -3,7 +3,9 @@ title:  Zombse
 layout: default
 ---
 
-The Zombie Stack Exchanges That Just Won't Die
+> The Zombie Stack Exchanges That Just Won't Die
+
+I've taken the data dumps from the Digital Preservation and the Library and Information Science Stack Exchange sites and generated static Markdown pages from them. I've then used GitHub Pages and Jekyll to host these static text files as HTML.
 
 Zombie Stack Exchanges
 ----------------------
