@@ -1,5 +1,5 @@
 ---
-title: Index
+title : Index
 ---
 * [Converting our printed genealogies into digital form](./questions1.html)
 * [How do I get JHOVE2 to build?](./questions3.html)
