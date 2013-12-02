@@ -32,10 +32,24 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
-.tag {
-  background: #eee;
-  padding: 0.1em;
-}
+.tags ul {
+ margin-left: 0;
+ padding-left: 0;
+ display: inline;
+ }
+.tags ul li {
+ margin-left: 0;
+ padding: 3px 15px;
+ border-left: 1px solid #000;
+ list-style: none;
+ display: inline;
+ }
+.tags ul li.first {
+ margin-left: 0;
+ border-left: none;
+ list-style: none;
+ display: inline;
+ }
 
 a {
   color:#39c;
