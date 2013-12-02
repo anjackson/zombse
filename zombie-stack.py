@@ -6,6 +6,9 @@ from lxml import etree
 from lxml import objectify
 from subprocess import Popen, PIPE, STDOUT
 import StringIO
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 def to_markdown(html_in):
   p = Popen(["pandoc", "-f", "html", "-t", "markdown"], stdout=PIPE, stdin=PIPE, stderr=STDOUT)
@@ -63,6 +66,8 @@ for r in posts.row:
     print >>md, to_markdown(r.get("Body"))
     u = get_user(r.get("OwnerUserId"))
     print >>md, u.get("DisplayName")
+    print >>md, ""
+    print >>md, "Tags: "+str(r.get("Tags"))
     print >>md, ""
     print_comments(md,Id)
     print >>md, ""
