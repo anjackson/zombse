@@ -45,6 +45,14 @@ def print_comments(md,Id):
           print >>md, "* "+ cu.get("DisplayName") + ": "+to_markdown(comment.get("Text")).strip()
     print >>md, ""
 
+def format_tags( tags ):
+    tout = '<div class="tags">'
+    for tag in tags.split("><"):
+      tag = tag.strip("<>")
+      tout += '<span class="tag">'+tag+'</span>'
+    tout += '</div>'
+    return tout
+
 
 inpage = open("static/index.md","w")
 print >>inpage, "---"
@@ -66,8 +74,10 @@ for r in posts.row:
     print >>md, to_markdown(r.get("Body"))
     u = get_user(r.get("OwnerUserId"))
     print >>md, u.get("DisplayName")
-    print >>md, ""
-    print >>md, "Tags: "+str(r.get("Tags"))
+    tags = r.get("Tags")
+    if tags != None:
+      print >>md, ""
+      print >>md, format_tags(tags)
     print >>md, ""
     print_comments(md,Id)
     print >>md, ""

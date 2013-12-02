@@ -32,6 +32,12 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
+.tag {
+  background: gray;
+  border: 1px solid darkgray;
+  padding: 0.5em;
+}
+
 a {
   color:#39c;
   font-weight:400;
