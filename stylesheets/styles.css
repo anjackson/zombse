@@ -33,9 +33,8 @@ h3, h4, h5, h6 {
 }
 
 .tag {
-  background: gray;
-  border: 1px solid darkgray;
-  padding: 0.5em;
+  background: #eee;
+  padding: 0.1em;
 }
 
 a {

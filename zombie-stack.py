@@ -46,11 +46,11 @@ def print_comments(md,Id):
     print >>md, ""
 
 def format_tags( tags ):
-    tout = '<div class="tags">'
+    tout = '<ul class="tags">'
     for tag in tags.split("><"):
       tag = tag.strip("<>")
-      tout += '<span class="tag">'+tag+'</span>'
-    tout += '</div>'
+      tout += '<li class="tag">'+tag+'</li>'
+    tout += '</ul>'
     return tout
 
 
