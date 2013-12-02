@@ -36,17 +36,15 @@ ul.tags {
  margin-left: 0;
  padding-left: 0;
  display: inline;
+ margin-bottom: 1em;
+ display: block;
  }
 ul.tags li {
  margin-left: 0;
  padding: 3px 15px;
  border-left: 1px solid #000;
- list-style: none;
- display: inline;
- }
-ul.tags li.first {
- margin-left: 0;
- border-left: none;
+ border-right: 1px solid #000;
+ background: #eee;
  list-style: none;
  display: inline;
  }
